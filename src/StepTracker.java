@@ -77,9 +77,6 @@ public class StepTracker {
                 series[i] = 0;
             }
         }
-        for (int i = 0; i <= 29; i++) {
-            System.out.println(series[i]);
-        }
         int maxSeries = 0;
         for (int i = 0; i <= 29; i++) { //находим максимальную серию
             if (series[i] > maxSeries) {
