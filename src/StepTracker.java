@@ -4,10 +4,10 @@ public class StepTracker {
         System.out.println("Введите номер месяца, начиная с 0");
         Scanner scanner = new Scanner(System.in);
         int month = scanner.nextInt();
-        if (month < 12) {
+        if ((month >= 0) & (month < 12)) {
             System.out.println("Введите дату месяца");
             int data = scanner.nextInt();
-            if (data <= 30) {
+            if ((data >= 1) & (data <= 30)) {
                 System.out.println("Введите количество шагов");
                 int steps = scanner.nextInt();
                 if (steps > 0) {
