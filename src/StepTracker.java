@@ -32,14 +32,14 @@ public class StepTracker {
             for (int i = 0; i <= 29; i++) {
                 System.out.println((i + 1) + " день: " + statSteps[month][i]);
             }
+            System.out.println("Общее количество шагов за месяц - " + sumStep(month, statSteps));
+            findMaxSteps(month, statSteps);
+            findAverageSteps(sumStep(month, statSteps));
+            Converter.converter(sumStep(month, statSteps));
+            findBestSeries(month, goal, statSteps);
         } else {
             System.out.println("Вы ввели некорректное значение месяца");
         }
-        System.out.println("Общее количество шагов за месяц - " + sumStep(month, statSteps));
-        findMaxSteps(month, statSteps);
-        findAverageSteps(sumStep(month, statSteps));
-        Converter.converter(sumStep(month, statSteps));
-        findBestSeries(month, goal, statSteps);
     }
 
     public static int changeGoal() { //вводим новую цель
