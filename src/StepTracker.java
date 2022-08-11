@@ -28,7 +28,7 @@ public class StepTracker {
         System.out.println("Введите номер месяца, начиная с 0, за который хотите получить статистику");
         Scanner scanner = new Scanner(System.in);
         int month = scanner.nextInt();
-        if (month < 12) {
+        if ((month >= 0) & (month < 12)) {
             for (int i = 0; i <= 29; i++) {
                 System.out.println((i + 1) + " день: " + statSteps[month][i]);
             }
